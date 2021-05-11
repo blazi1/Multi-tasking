@@ -1,0 +1,20 @@
+#Expyriment 0.10.0 (Python 3.8.3), .xpd-file, coding: UTF-8
+#date: Tue May 11 2021 15:33:57
+#--EXPERIMENT INFO
+#e mainfile: first_experiment.py
+#e sha1: 026e6d
+#e modules: 
+#e Experiment: Multitasking
+#e no between subject factors
+#e Block 0: Primerno tudi za moske
+#e     block factors: 
+#e     n trials: 2
+#e     trial factors: 
+#e Block 1: Primerno tudi za moske
+#e     block factors: 
+#e     n trials: 2
+#e     trial factors: 
+#--SUBJECT INFO
+#s id: 1
+subject_id,Block,Trial,Key,RT
+1,Primerno tudi za moske,0,None,None

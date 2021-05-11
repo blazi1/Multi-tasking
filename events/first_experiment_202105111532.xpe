@@ -1,0 +1,13 @@
+#Expyriment 0.10.0 (Python 3.8.3), .xpe-file, coding: UTF-8
+#date: Tue May 11 2021 15:32:57
+#sha1: afae43
+#modules: 
+#display: size=(1440, 900), window_mode=False, open_gl=False
+#os: uname_result(system='Darwin', node='Carunalnik.local', release='20.2.0', version='Darwin Kernel Version 20.2.0: Wed Dec  2 20:39:59 PST 2020; root:xnu-7195.60.75~1/RELEASE_X86_64', machine='x86_64', processor='i386')
+Time,Type,Event,Value,Detail,Detail2
+4490,stderr,received,'Traceback (most recent call last):'
+4490,stderr,received,'  File "first_experiment.py", line 16, in <module>'
+4491,stderr,received,"    stim1 = expyriment.stimuli.Picture(os.getcwd() + '/Stimuli_folder' + 'd2u.png')"
+4491,stderr,received,'  File "/Users/blazistenic/opt/anaconda3/lib/python3.8/site-packages/expyriment/stimuli/_picture.py", line 48, in __init__'
+4493,stderr,received,'    raise IOError(u"The picture file \'{0}\' does not exist".format('
+4493,stderr,received,"OSError: The picture file '/Users/blazistenic/Documents/Project/Multi-tasking/Stimuli_folderd2u.png' does not exist"
