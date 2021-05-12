@@ -1,6 +1,6 @@
 ## Are women better than men at multi-tasking?
 
-The project page is available on: (https://blazi1.github.io/Multi-tasking/).
+The project page is available on: https://blazi1.github.io/Multi-tasking/ and the repository on: https://github.com/blazi1/Multi-tasking
 
 ### Project
 
@@ -8,7 +8,7 @@ The project consisted in replicating the paper (Stoet et al.) which tried to ver
 
 According to Stoet et al. (2013), multi-tasking can be defined in two ways: as performing several tasks sequentially/interchangeably or as performing several tasks simultaneously. It is the first sense that is used in the part of the paper by Stoet et al. (2013) that we reproduced. Here, multi-tasking ammounted to task-switching.
 
-We only reproduced Experiment 1, because Experiment 2 wasn’t computer-based at all; it aimed to create a "real-life" multi-tasking situation and used standardized neuro-cognitive tests.
+We will only reproduce Experiment 1, because Experiment 2 wasn’t computer-based at all; it aimed to create a "real-life" multi-tasking situation and used standardized neuro-cognitive tests.
 
 ```markdown
 Syntax highlighted code block
