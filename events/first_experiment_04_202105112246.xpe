@@ -1,0 +1,28 @@
+#Expyriment 0.10.0 (Python 3.8.3), .xpe-file, coding: UTF-8
+#date: Tue May 11 2021 22:46:39
+#sha1: bbbda8
+#modules: 
+#display: size=(1440, 900), window_mode=False, open_gl=False
+#os: uname_result(system='Darwin', node='Carunalnik.local', release='20.2.0', version='Darwin Kernel Version 20.2.0: Wed Dec  2 20:39:59 PST 2020; root:xnu-7195.60.75~1/RELEASE_X86_64', machine='x86_64', processor='i386')
+Time,Type,Event,Value,Detail,Detail2
+4451,Picture,loaded,/Users/blazistenic/Documents/Project/Multi-tasking/Stimuli/s2u.png
+4457,Picture,loaded,/Users/blazistenic/Documents/Project/Multi-tasking/Stimuli/s2d.png
+4463,Picture,loaded,/Users/blazistenic/Documents/Project/Multi-tasking/Stimuli/s3u.png
+5268,Picture,loaded,/Users/blazistenic/Documents/Project/Multi-tasking/Stimuli/s3d.png
+5273,Picture,loaded,/Users/blazistenic/Documents/Project/Multi-tasking/Stimuli/d2u.png
+14321,design,log,
+#design: #exp: Multitasking
+#design: block_cnt,block_id,trial_cnt,trial_id
+#design: 0,0,0,0
+#design: 0,0,1,1
+#design: 1,1,0,0
+#design: 1,1,1,1
+14321,design,logged,
+14321,Experiment,started
+14323,Stimulus,presented,0
+18324,Keyboard,received,None,wait
+18337,Stimulus,presented,8
+23338,stderr,received,'Traceback (most recent call last):'
+23338,stderr,received,'  File "first_experiment.py", line 74, in <module>'
+23338,stderr,received,'    blankscreen.present()'
+23338,stderr,received,"NameError: name 'blankscreen' is not defined"

@@ -1,0 +1,45 @@
+#Expyriment 0.10.0 (Python 3.8.3), .xpe-file, coding: UTF-8
+#date: Wed May 12 2021 00:16:29
+#sha1: 5a68f9
+#modules: 
+#display: size=(1440, 900), window_mode=False, open_gl=False
+#os: uname_result(system='Darwin', node='Carunalnik.local', release='20.2.0', version='Darwin Kernel Version 20.2.0: Wed Dec  2 20:39:59 PST 2020; root:xnu-7195.60.75~1/RELEASE_X86_64', machine='x86_64', processor='i386')
+Time,Type,Event,Value,Detail,Detail2
+4482,Picture,loaded,/Users/blazistenic/Documents/Project/Multi-tasking/Stimuli/d2u.png
+4489,Picture,loaded,/Users/blazistenic/Documents/Project/Multi-tasking/Stimuli/d3u.png
+4495,Picture,loaded,/Users/blazistenic/Documents/Project/Multi-tasking/Stimuli/s2u.png
+4501,Picture,loaded,/Users/blazistenic/Documents/Project/Multi-tasking/Stimuli/s3u.png
+5307,Picture,loaded,/Users/blazistenic/Documents/Project/Multi-tasking/Stimuli/s3d.png
+5311,Picture,loaded,/Users/blazistenic/Documents/Project/Multi-tasking/Stimuli/d2u.png
+35465,design,log,
+#design: #exp: Multitasking
+#design: block_cnt,block_id,trial_cnt,trial_id
+#design: 0,0,0,0
+#design: 0,0,1,1
+#design: 1,1,0,0
+#design: 1,1,1,1
+35465,design,logged,
+35465,Experiment,started
+35470,Stimulus,presented,0
+39471,Keyboard,received,None,wait
+39484,Stimulus,presented,9
+44490,Stimulus,presented,10
+44992,Stimulus,presented,1
+48994,Keyboard,received,None,wait
+49006,Stimulus,presented,11
+54011,Stimulus,presented,12
+54512,Stimulus,presented,2
+58514,Keyboard,received,None,wait
+58525,Stimulus,presented,13
+63532,Stimulus,presented,14
+64033,Stimulus,presented,3
+64543,Keyboard,received,1073741903,wait
+64545,Stimulus,presented,4
+65439,Keyboard,received,1073741903,wait
+65442,Stimulus,presented,5
+65878,Keyboard,received,1073741903,wait
+65880,Stimulus,presented,6
+66238,Keyboard,received,1073741903,wait
+66238,Experiment,ended
+66242,Data,saved
+66244,Stimulus,presented,15

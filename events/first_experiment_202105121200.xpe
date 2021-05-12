@@ -1,0 +1,16 @@
+#Expyriment 0.10.0 (Python 3.8.3), .xpe-file, coding: UTF-8
+#date: Wed May 12 2021 12:00:43
+#sha1: 115faf
+#modules: 
+#display: size=(1440, 900), window_mode=False, open_gl=False
+#os: uname_result(system='Darwin', node='Carunalnik.local', release='20.2.0', version='Darwin Kernel Version 20.2.0: Wed Dec  2 20:39:59 PST 2020; root:xnu-7195.60.75~1/RELEASE_X86_64', machine='x86_64', processor='i386')
+Time,Type,Event,Value,Detail,Detail2
+4476,Stimulus,presented,0
+7953,Keyboard,received,m,wait_char
+7953,stdout,received,'m'
+7960,Stimulus,presented,1
+21411,Experiment,paused
+21413,Stimulus,presented,2
+22209,Keyboard,received,y,wait_char
+22209,Experiment,ended
+22213,Stimulus,presented,2
