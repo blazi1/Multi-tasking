@@ -36,4 +36,6 @@ The main concept of the experiment is responding to the location and the form of
 
 ### Our implementation
 
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+Even thought the order was identical for all participants, we decided to provide the possibility of randomising it, also because it is much easier to just use it once to generate it if you want.
+
+Certainly the code could be even cleaner
