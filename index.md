@@ -1,12 +1,14 @@
 ## Welcome to GitHub Pages
 
-You can use the [editor on GitHub](https://github.com/blazi1/Multi-tasking/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+The project page is available on: https://blazi1.github.io/Multi-tasking/ and the repository on: https://github.com/blazi1/Multi-tasking
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+### Project
 
-### Markdown
+The project consisted in replicating the paper (Stoet et al.) which tried to verify the common belief that women are better at multi-tasking than men. To check this, they designed two experiments. In the first one, computer-based task switching paradigm was used, and in the second one, paper-and-pencil multi-tasking tests were used.
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+According to Stoet et al. (2013), multi-tasking can be defined in two ways: as performing several tasks sequentially/interchangeably or as performing several tasks simultaneously. It is the first sense that is used in the part of the paper by Stoet et al. (2013) that we reproduced. Here, multi-tasking ammounted to task-switching.
+
+We will only reproduce Experiment 1, because Experiment 2 wasn’t computer-based at all; it aimed to create a "real-life" multi-tasking situation and used standardized neuro-cognitive tests.
 
 ```markdown
 Syntax highlighted code block
