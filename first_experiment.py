@@ -3,7 +3,8 @@ import os
 from random import choice, shuffle
 
 
-beginning_text = "We are measuring multitasking. Your task will be to classify figures. If they appear under the label 'Shape', you will have to press the LEFT arrow key if it is a diamond and the RIGHT arrow key if it is a square. If the figure appears above 'Filling', you will have to press the LEFT arrow key if it contains two dots and the RIGHT arrow key if it contains three dots. \nPlease press any key to continue if you have understood the instructions. \nIf at any time you will want to end the experiment, you can press ESCAPE."
+beginning_text = "We are measuring multitasking. Your task will be to classify figures." 
+beginning_text_continue = "If they appear under the label 'Shape', you will have to press the LEFT arrow key if it is a diamond and the RIGHT arrow key if it is a square. If the figure appears above 'Filling', you will have to press the LEFT arrow key if it contains two dots and the RIGHT arrow key if it contains three dots. \nPlease press any key to continue if you have understood the instructions. \nIf at any time you will want to end the experiment, you can press ESCAPE."
 info_text = "First, we would like to know something about you."
 response = "Your response was incorrect or not received."
 
@@ -52,7 +53,7 @@ exp = expyriment.design.Experiment(name="Multitasking")
 expyriment.control.initialize(exp)
 
 
-expyriment.stimuli.TextScreen("Welcome to our multitasking experiment.", heading_size = 40, text = beginning_text).present()
+expyriment.stimuli.TextScreen("Welcome to our multitasking experiment.", heading_size = 40, text = beginning_text + beginning_text_continue).present()
 exp.keyboard.wait()
 
 expyriment.stimuli.TextScreen(info_text, heading_size = 40, text =  "If your biological gender is male press M, if it is female press F").present()
@@ -110,9 +111,20 @@ counter_trials = -1
 counter_stimuli = -1
 correct = ""
 correctness = ""
+counter = 0
 for block in exp.blocks:
 	counter_blocks += 1
 	for trial in block.trials:
+		if counter == 0:
+			expyriment.stimuli.TextScreen("Welcome to our multitasking experiment.", heading_size = 40, text = "You will have to press the LEFT arrow key if it is a diamond and the RIGHT arrow key if it is a square").present()
+			exp.keyboard.wait()
+		if counter == 1:
+			expyriment.stimuli.TextScreen("Welcome to our multitasking experiment.", heading_size = 40, text = "You will have to press the LEFT arrow key if it contains two dots and the RIGHT arrow key if it contains three dots).present()
+			exp.keyboard.wait()
+		if counter == 2:
+			xpyriment.stimuli.TextScreen("Third part consists in the real multitasking task. Here, figures will appear under 'Shape' and above 'Filling' interchangeably", heading_size = 40, text = beginning_text_continue).present()
+			exp.keyboard.wait()
+		counter += 1
 		counter_trials += 1
 		for stimulus in trial.stimuli:
 			counter_stimuli += 1
