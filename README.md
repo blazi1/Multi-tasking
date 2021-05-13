@@ -1,4 +1,4 @@
-#### Are women better than men at multi-tasking?
+# Are women better than men at multi-tasking?
 
 The project page is available on: https://blazi1.github.io/Multi-tasking/ and the repository on: https://github.com/blazi1/Multi-tasking
 
