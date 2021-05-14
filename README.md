@@ -36,8 +36,9 @@ This will generate two figures.
 
 ## My implementation
 
-My implementation of the experiment has four parts. The first part is the folder `Stimuli` with images of stimuli used. We've   First, the file 
-`Stimuli`
+My implementation of the experiment has four parts. The first part is the folder `Stimuli` with images of stimuli used. I've had some problems with stimuli, so I had to manually generate them and they are therefore in a separate folder that has to be included. 
+The main part is of course the file `multi_tasking_code.py`, where the experiment itself takes place. First, the file generates the order of stimuli, then prepares two blocks of three trials, each with 40 stimuli for the training part and 64 each for the actual experimental part. As mentioned earlier, only in the second block data are collected. 
+We should add that the words "Block", "Trial", and "Stimulus" mean different things here compared to the use in the paper we are recreating. Here, we have two blocks of three trials, first block with 40 stimuli and second block with 64 stimuli each time. It is only in this second block that the actual experiment begins (data start getting collected). In the paper, blocks are our trials and trials are our stimuli. In the `generate_results.py` file, we use the terminology provided in the paper, because the first block (in our parlance) doesn't figure in the data at all, so we can consider as blocks the three trials and as trials the 64 * 3 stimuli.
 I think you should use an
 `multi_tasking_code.py` element here instead.
 `generate_results.py`
