@@ -53,8 +53,7 @@ Subject_id Block, Trial, Sex, Age, Key, Response Time (ms), Response, Task Switc
 
 4. The last part is the file `data_analysis.py` which first takes runs `generate_results.py` and gets a dictionary of individual subjects. Then it divides the results into those by men and women (since that is the purpose of the experiment) and averages them. Also, it converts the response times into seconds (from miliseconds) and the error rates into percentages (from decimals). Then it plots two graphs, one with response rates for each condition (and comparing men and women) and the other with error rates (also for each condition and comparing men and women). Here, we provide a link to these graphs (although the data are illustrative since we only used one female and one male subject) in our repository: https://github.com/blazi1/Multi-tasking/blob/main/Response_times.png and https://github.com/blazi1/Multi-tasking/blob/main/Error_percentages.png.
 
-<img src="https://user-images.githubusercontent.com/53874416/118336180-7233c900-b511-11eb-9680-4e34c014c0dd.png" width="400" height="350">
-<img src="https://user-images.githubusercontent.com/53874416/118336321-b7f09180-b511-11eb-9aad-ec06e13acfe8.png" width="400" height="350">
+<img src="https://user-images.githubusercontent.com/53874416/118336180-7233c900-b511-11eb-9680-4e34c014c0dd.png" width="400" height="350"> <img src="https://user-images.githubusercontent.com/53874416/118336321-b7f09180-b511-11eb-9aad-ec06e13acfe8.png" width="400" height="350">
 
 
 ### Other remarks
