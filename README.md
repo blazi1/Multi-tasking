@@ -38,7 +38,7 @@ I think you should use an
 `data_analysis.py`
 
 
-### OTHER REMARKS
+### Other remarks
 
 Because of my philosophical and linguistic background this was my first time programming a project in Python, so the class was a new experience to me. It was interesting not to just get some programming skills, but also to learn how to use GitHub which is something I will probably need in the future, too. 
 What I missed in the class was especially a bit more thourough introduction to basic programming concepts. I am aware, however, that we didn't have a lot of time and that it is almost impossible to make the class work since the students' skills are so different.
