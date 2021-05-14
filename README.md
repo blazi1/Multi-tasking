@@ -38,7 +38,7 @@ This will generate two figures.
 
 My implementation of the experiment has four parts. 
 
-1. The first part is the folder `Stimuli` with images of stimuli used. I've had some problems with stimuli, so I had to manually generate them and they are therefore in a separate folder that has to be included. One stimuli is provided here:
+1. The first part is the folder `Stimuli` with images of stimuli used. I've had some problems with stimuli, so I had to manually generate them and they are therefore in a separate folder that has to be included. One stimuli is provided here (a diamond with two dots that requires a LEFT arrow key press since it is located under 'Shape', it would also require a LEFT arrow key press if it was above 'Filling'):
 
 <img src="https://user-images.githubusercontent.com/53874416/118336779-a65bb980-b512-11eb-9434-6dd3ee247b37.png" width="450" height="350"> 
 
