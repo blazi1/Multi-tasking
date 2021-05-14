@@ -1,5 +1,5 @@
 
-<img src="https://user-images.githubusercontent.com/53874416/118336180-7233c900-b511-11eb-9680-4e34c014c0dd.png" width="350" height="350">
+<img src="https://user-images.githubusercontent.com/53874416/118336180-7233c900-b511-11eb-9680-4e34c014c0dd.png" width="400" height="350">
 # Are women better than men at multi-tasking?
 
 The project page is available on: https://blazi1.github.io/Multi-tasking/ and the repository on: https://github.com/blazi1/Multi-tasking
