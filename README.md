@@ -49,6 +49,14 @@ Thus, a line of the following type is generated:
 Subject_id Block, Trial, Sex, Age, Key, Response Time (ms), Response, Task Switch or not, Congruent or not
    4,       3,      1,    f,   22, LEFT,    1016,           CORRECT,        False,              True
 ```
+3. The third part is the file `generate_results.py` which is responsible for (surprise, surprise) generating the results by taking all the lines from the files of particular subjects (/tries) and averaging the response times for different conditions and also calculating error rates, so that the result is a dictionary with 14 values for each subject: sex, age and then the possible conditions: six for response times and six for error rates: 
+
+#wrong_first_two_blocks_cong
+		women[7] += results[subject][12]   #wrong_first_two_blocks_incong
+		women[8] += results[subject][10]   #wrong_response_repeat_cong 
+		women[9] += results[subject][8]    #wrong_response_repeat_incong
+		women[10] += results[subject][11]  #wrong_response_switch_cong
+		women[11] += results[subject][9]   #wrong_response_switch_incong
 [699, 655, 745, 597, 1254, 1001, 9.803921568627452, 18.0327868852459, 33.33333333333333, 28.57142857142857, 27.27272727272727, 60.0]
 
 3. 
