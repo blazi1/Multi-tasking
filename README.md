@@ -8,7 +8,7 @@ According to Stoet et al. (2013), multi-tasking can be defined in two ways: as p
 
 We have only reproduce Experiment 1, because Experiment 2 wasn’t computer-based at all; it aimed to create a "real-life" multi-tasking situation and used standardized neuro-cognitive tests.
 
-### THE EXPERIMENT
+## The Experiment
 
 The main concept of the experiment is responding to the location and the form of stimuli: 
 1. *differentiating between diamonds and squares* (if the stimuli appears bellow "Shape") by pressing the LEFT arrow key for a diamond and the RIGHT arrow key for a square
@@ -16,7 +16,7 @@ The main concept of the experiment is responding to the location and the form of
 
 First, the experiment is divided in two parts: training and the real experiment (where the actual data are collected). Each part consists of three blocks of trials (40 each for training and 64 each in the real experiment). In the first block, subjects only differentiate between diamonds and squares and in the second block they only differentiate between the number of dots in the figures (2 or 3). It is only in the third block that the real experiment starts: figures randomly (and intechangeably) appear either bellow "Shape" or above "Filling" which determines whether the subject has to focus on shapes or dots and press the key accordingly.
 
-### RUNNING THE EXPERIMENT 
+## Running the experiment
 
 To run the experiment, make sure you have downloaded the whole folder, including the folder `Stimuli` and the files `multi_tasking_code.py`, `generate_results.py`, and `data_analysis.py`. First, several subjects have to take part in the experiment to provide data. This is done by running the file `multi_tasking_code.py`. Using the terminal, this means first moving to the folder where all the mentioned (downloaded) files are and then executing:
 ```
@@ -28,7 +28,7 @@ python data_analysis.py
 ```
 `generate_results.py` is just an auxiliary file that is used by the file `data_analysis.py`, so we don't have to run it.
 
-### MY IMPLEMENTATION
+## My implementation
 
 My implementation of the experiment has four parts. The first part is the folder `Stimuli` with images of stimuli used. We've   First, the file 
 `Stimuli`
