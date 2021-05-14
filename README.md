@@ -18,12 +18,15 @@ First, the experiment is divided in two parts: training and the real experiment 
 
 ### RUNNING THE EXPERIMENT 
 
-To run the experiment, make sure you have downloaded the whole folder, including the folder `Stimuli` and the files `multi_tasking_code.py`, `generate_results.py`, and `data_analysis.py`. First, several subjects have to take part in the experiment to provide data. This is done by running the file `multi_tasking_code.py`. Using the terminal, this means first moving to the folder where all the mentioned (downloaded) files are and then executing 
-Some basic Git commands are:
+To run the experiment, make sure you have downloaded the whole folder, including the folder `Stimuli` and the files `multi_tasking_code.py`, `generate_results.py`, and `data_analysis.py`. First, several subjects have to take part in the experiment to provide data. This is done by running the file `multi_tasking_code.py`. Using the terminal, this means first moving to the folder where all the mentioned (downloaded) files are and then executing:
 ```
 python multi_tasking_code.py
 ```
-
+Once that the data has been provided, we can analyse it by running:
+```
+python data_analysis.py
+```
+`generate_results.py` is just an auxiliary file that is used by the file `data_analysis.py`, so we don't have to run it.
 
 ### MY IMPLEMENTATION
 
