@@ -31,6 +31,7 @@ Once that the data has been provided, we can analyse it by running:
 ```
 python data_analysis.py
 ```
+This will generate two figures. 
 `generate_results.py` is just an auxiliary file that is used by the file `data_analysis.py`, so we don't have to run it.
 
 ## My implementation
