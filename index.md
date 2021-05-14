@@ -1,5 +1,3 @@
-
-<img src="{{site.logo | https://user-images.githubusercontent.com/53874416/118336779-a65bb980-b512-11eb-9434-6dd3ee247b37.png}}" alt="Logo" />
 ## Are women better than men at multi-tasking?
 
 Recreating the experiment presented in Stoet et al. (2013).
