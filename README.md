@@ -18,9 +18,6 @@ First, the experiment is divided in two parts: training and the real experiment 
 
 ### OUR IMPLEMENTATION
 
-Even thought the order was identical for all participants, we decided to provide the possibility of randomising it, also because it is much easier to just use it once to generate it if you want.
-
-
 I think you should use an
 `<addr>` element here instead.
 
