@@ -59,7 +59,10 @@ Subject_id Block, Trial, Sex, Age, Key, Response Time (ms), Response, Task Switc
 		women[11] += results[subject][9]   #wrong_response_switch_incong
 [699, 655, 745, 597, 1254, 1001, 9.803921568627452, 18.0327868852459, 33.33333333333333, 28.57142857142857, 27.27272727272727, 60.0]
 
-3. 
+4. The last part is the file `data_analysis.py` which first takes runs `generate_results.py` and gets a dictionary of individual subjects. Then it divides the results into those by men and women (since that is the purpose of the experiment) and averages them. Also, it converts the response times into seconds (from miliseconds) and the error rates into percentages (from decimals). Then it plots two graphs, one with response rates for each condition (and comparing men and women) and the other with error rates (also for each condition and comparing men and women). Here, we provide an example of these graphs (although the data are illustrative since we only used one female and one male subject). 
+
+![alt text](https://github.com/blazi1/Multi-tasking/blob/main/Response_times.png)
+![alt text](https://github.com/blazi1/Multi-tasking/blob/main/Error_percentages.png)
 I think you should use an
 `multi_tasking_code.py` element here instead.
 `generate_results.py`
