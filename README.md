@@ -19,7 +19,9 @@ First, the experiment is divided in two parts: training and the real experiment 
 ### OUR IMPLEMENTATION
 
 I think you should use an
-`<addr>` element here instead.
+`multi_tasking_code.py` element here instead.
+`generate_results.py`
+`data_analysis.py`
 
 ### RUNNING THE EXPERIMENT 
 
