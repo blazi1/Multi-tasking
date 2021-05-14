@@ -49,25 +49,9 @@ Thus, a line of the following type is generated:
 Subject_id Block, Trial, Sex, Age, Key, Response Time (ms), Response, Task Switch or not, Congruent or not
    4,       3,      1,    f,   22, LEFT,    1016,           CORRECT,        False,              True
 ```
-3. The third part is the file `generate_results.py` which is responsible for (surprise, surprise) generating the results by taking all the lines from the files of particular subjects (/tries) and averaging the response times for different conditions and also calculating error rates, so that the result is a dictionary with 14 values for each subject: sex, age and then the possible conditions: six for response times and six for error rates: 
+3. The third part is the file `generate_results.py` which is responsible for (surprise, surprise) generating the results by taking all the lines from the files of particular subjects (/tries) and averaging the response times for different conditions and also calculating error rates, so that the result is a dictionary with 14 values for each subject: sex, age and then the possible conditions: six for response times and six for error rates: two for "pure" blocks where the task isn't changing (one for congruent and the other for incongruent cases), two for mixed trials where the task repeats itself (one for congruent and the other for incongruent cases), and two for mixed trials where the task changes (one for congruent and the other for incongruent cases).
 
-#wrong_first_two_blocks_cong
-		women[7] += results[subject][12]   #wrong_first_two_blocks_incong
-		women[8] += results[subject][10]   #wrong_response_repeat_cong 
-		women[9] += results[subject][8]    #wrong_response_repeat_incong
-		women[10] += results[subject][11]  #wrong_response_switch_cong
-		women[11] += results[subject][9]   #wrong_response_switch_incong
-[699, 655, 745, 597, 1254, 1001, 9.803921568627452, 18.0327868852459, 33.33333333333333, 28.57142857142857, 27.27272727272727, 60.0]
-
-4. The last part is the file `data_analysis.py` which first takes runs `generate_results.py` and gets a dictionary of individual subjects. Then it divides the results into those by men and women (since that is the purpose of the experiment) and averages them. Also, it converts the response times into seconds (from miliseconds) and the error rates into percentages (from decimals). Then it plots two graphs, one with response rates for each condition (and comparing men and women) and the other with error rates (also for each condition and comparing men and women). Here, we provide an example of these graphs (although the data are illustrative since we only used one female and one male subject). 
-
-<img src="https://github.com/blazi1/Multi-tasking/blob/main/Response_times.png" width="250", heigth="250">
-<img src="https://github.com/blazi1/Multi-tasking/blob/main/Error_percentages.png" width="250", heigth="250">
-
-I think you should use an
-`multi_tasking_code.py` element here instead.
-`generate_results.py`
-`data_analysis.py`
+4. The last part is the file `data_analysis.py` which first takes runs `generate_results.py` and gets a dictionary of individual subjects. Then it divides the results into those by men and women (since that is the purpose of the experiment) and averages them. Also, it converts the response times into seconds (from miliseconds) and the error rates into percentages (from decimals). Then it plots two graphs, one with response rates for each condition (and comparing men and women) and the other with error rates (also for each condition and comparing men and women). Here, we provide a link to these graphs (although the data are illustrative since we only used one female and one male subject) in our repository: https://github.com/blazi1/Multi-tasking/blob/main/Response_times.png and https://github.com/blazi1/Multi-tasking/blob/main/Error_percentages.png.
 
 
 ### Other remarks
