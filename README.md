@@ -2,7 +2,11 @@
 
 The project page is available on: https://blazi1.github.io/Multi-tasking/ and the repository on: https://github.com/blazi1/Multi-tasking
 
-<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+- [Are women better than men at multi-tasking?](#are-women-better-than-men-at-multi-tasking-)
+  * [The Experiment](#the-experiment)
+  * [Running the experiment](#running-the-experiment)
+  * [My implementation](#my-implementation)
+  * [Other remarks](#other-remarks)
 
 The project consisted in replicating the paper (Stoet et al.) which tried to verify the common belief that women are better at multi-tasking than men. To check this, they designed two experiments. In the first one, computer-based task switching paradigm was used, and in the second one, paper-and-pencil multi-tasking tests were used.
 
