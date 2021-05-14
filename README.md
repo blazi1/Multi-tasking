@@ -2,6 +2,8 @@
 
 The project page is available on: https://blazi1.github.io/Multi-tasking/ and the repository on: https://github.com/blazi1/Multi-tasking
 
+<small><i><a href='http://ecotrust-canada.github.io/markdown-toc/'>Table of contents generated with markdown-toc</a></i></small>
+
 The project consisted in replicating the paper (Stoet et al.) which tried to verify the common belief that women are better at multi-tasking than men. To check this, they designed two experiments. In the first one, computer-based task switching paradigm was used, and in the second one, paper-and-pencil multi-tasking tests were used.
 
 According to Stoet et al. (2013), multi-tasking can be defined in two ways: as performing several tasks sequentially/interchangeably or as performing several tasks simultaneously. It is the first sense that is used in the part of the paper by Stoet et al. (2013) that we reproduced. Here, multi-tasking ammounted to task-switching.
