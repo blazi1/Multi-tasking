@@ -3,13 +3,13 @@ import os
 from random import choice
 
 #waiting times 
-intertrial_interval = 800
-wrong_no_answer_wait = 5000
-pause = 500 
+INTERTRIAL_INTERVAL = 800
+WRONG_NO_ANSWER_WAIT = 5000
+PAUSE = 500
 
 #some of the text used
 beginning_text = "We are measuring multitasking. Your task will be to classify figures." 
-beginning_text_continue = "If they appear under the label 'Shape', you will have to press the LEFT arrow key if it is a diamond and the RIGHT arrow key if it is a square. If the figure appears above 'Filling', you will have to press the LEFT arrow key if it contains two dots and the RIGHT arrow key if it contains three dots. \nPlease press any key to continue if you have understood the instructions. \nIf at any time you will want to end the experiment, you can press ESCAPE."
+beginning_text_continue = "If they appear under the label 'Shape', you have to press the LEFT arrow key if it is a diamond and the RIGHT arrow key if it is a square. If the figure appears above 'Filling', you will have to press the LEFT arrow key if it contains two dots and the RIGHT arrow key if it contains three dots. \nPlease press any key to continue if you have understood the instructions. \nIf at any time you will want to end the experiment, you can press ESCAPE."
 info_text = "First, we would like to know something about you."
 response = "Your response was incorrect or not received."
 
@@ -49,7 +49,13 @@ def adding_stimuli(ordering_list, trial1, trial2, trial3):
 	return trial1, trial2, trial3
 
 
-#Starting the experiment
+#Starting the experiment 
+"""We should add that the words "Block", "Trial", and "Stimulus" mean different things here 
+compared to the use in the paper we are recreating. Here, we have two blocks of three trials, 
+first block with 40 stimuli and second block with 64 stimuli each time. In the paper, 
+blocks are our trials and trials are our stimuli.
+In the data file we use the terminology provided in the paper, because the first block (in our parlance) doesn't figure in the data at all, 
+so we can consider as blocks the three trials and as trials the 64 * 3 stimuli. """
 exp = expyriment.design.Experiment(name="Multitasking")
 expyriment.control.initialize(exp)
 
@@ -94,7 +100,7 @@ exp.add_block(block_two)
 
 
 expyriment.control.start()
-exp.data_variable_names = ["Block", "Trial", "Sex", "Age", "Key", "RT", "Response"]
+exp.data_variable_names = ["Block", "Trial", "Sex", "Age", "Key", "RT", "Response", "Task Switch or not"]
 
 #function that determines whas is the correct response
 def determine_correct(current_stimulus):
@@ -105,63 +111,79 @@ def determine_correct(current_stimulus):
 	    correct_determined = "RIGHT"
 	return correct_determined
 
-current = ""
-press = ""
-counter_blocks = -1
-counter_trials = -1
-counter_stimuli = -1
-correct = ""
-correctness = ""
-counter = 0
+#function that returns the instructions according to the trial (just shapes, just content, both)
+def greet(number_of_trial):
+	task_first = ""
+	task_second = ""
+	if number_of_trial == 0:
+	    task_first = "Here is your first task."
+	    task_second = "You have to press the LEFT arrow key if you see a diamond and the RIGHT arrow key if you see a square. Now press any key to continue."
+	if number_of_trial == 1:
+	    task_first = "We continue with your second task."
+	    task_second = "You have to press the LEFT arrow key if you see a diamond and the RIGHT arrow key if you see a square. Now press any key to continue."
+	if number_of_trial == 2:
+		task_first = "Third part consists in the real multitasking task."
+		task_second = "Here, figures will appear under 'Shape' and above 'Filling' interchangeably. If the figure appears under 'Shape', you have to press the LEFT arrow key if you see a diamond and the RIGHT arrow key if you see a square. If it appears above 'Filling', you have to press the LEFT arrow key if you see two dots and the RIGHT arrow key if you see three. Now press any key to continue."
+	return task_first, task_second
+
+
+#the main function that executes the experiment
+current_stimulus = "  x"
+pressed_key = ""
+counter_trials = 0
+counter_stimuli = 0
+correct_answer = ""
+right_or_wrong = ""
+previous_stimulus = "  x"
+task_switch = False
 for block in exp.blocks:
-	counter_blocks += 1
 	for trial in block.trials:
-		if counter == 0:
-			expyriment.stimuli.TextScreen("Here is your first task.", heading_size = 40, text = "You will have to press the LEFT arrow key if it is a diamond and the RIGHT arrow key if it is a square").present()
-			exp.keyboard.wait()
-		if counter == 1:
-			expyriment.stimuli.TextScreen("We continue with your second task.", heading_size = 40, text = "You will have to press the LEFT arrow key if it contains two dots and the RIGHT arrow key if it contains three dots").present()
-			exp.keyboard.wait()
-		if counter == 2:
-			xpyriment.stimuli.TextScreen("Third part consists in the real multitasking task. Here, figures will appear under 'Shape' and above 'Filling' interchangeably", heading_size = 40, text = beginning_text_continue).present()
-			exp.keyboard.wait()
-		counter += 1
-		counter_trials += 1
+		number_of_correct_responses = 0
+		first, second = greet(counter_trials)
+		expyriment.stimuli.TextScreen(first, heading_size = 40, text = second).present()
+		exp.keyboard.wait()
 		for stimulus in trial.stimuli:
-			counter_stimuli += 1
 			stimulus.present()
 			key, rt = exp.keyboard.wait([expyriment.misc.constants.K_LEFT,
                                      expyriment.misc.constants.K_RIGHT], duration=4000)
 			if key == 1073741904:
-				press = "LEFT" 
+				pressed_key = "LEFT" 
 			elif key == 1073741903:
-				press = "RIGHT" 
-			if block == exp.blocks[0]:
-				current = ordering[0][counter_trials][counter_stimuli]
-				correct = determine_correct(current)
-			elif block == exp.blocks[1]:
-				current = ordering[1][counter_trials][counter_stimuli]
-				correct = determine_correct(current)
-			if correct == press:
-				exp.clock.wait(intertrial_interval)
-				correctness = "CORRECT"
-			else:
-				if current[2] == 'u':
+				pressed_key = "RIGHT" 
+			if block == exp.blocks[0]: #training block
+				current_stimulus = ordering[0][counter_trials][counter_stimuli]
+				correct_answer = determine_correct(current_stimulus)
+			elif block == exp.blocks[1]: #real block
+			    previous_stimulus = current_stimulus
+			    current_stimulus = ordering[1][counter_trials][counter_stimuli]
+			    correct_answer = determine_correct(current_stimulus)
+			    if previous_stimulus[2] != current_stimulus[2] and counter_stimuli != 0:
+			        task_switch = True
+			    else: 
+			        task_switch = False
+			if correct_answer == pressed_key: #answer is correct
+				exp.clock.wait(INTERTRIAL_INTERVAL)
+				right_or_wrong = "CORRECT"
+				number_of_correct_responses += 1
+			else: #answer is wrong
+				if current_stimulus[2] == 'u':
 					reminder = "When the stimulus appears under 'Shape': if it is a diamond press LEFT, if it is a square press RIGHT."
-				elif current[2] == 'd':
+				elif current_stimulus[2] == 'd':
 					reminder = "When the stimulus appears above 'Filling': if it contains two dots press LEFT, if it contains three press RIGHT." 
-				if correct == "LEFT":
+				if correct_answer == "LEFT":
 					expyriment.stimuli.TextScreen(response, text_size = 40, text= reminder + "\nThe correct response was LEFT").present()
 				else:
 					expyriment.stimuli.TextScreen(response, text_size = 40, text= reminder +"\nThe correct response was RIGHT").present()
-				exp.clock.wait(wrong_no_answer_wait)
+				exp.clock.wait(WRONG_NO_ANSWER_WAIT)
 				expyriment.stimuli.BlankScreen().present()
-				exp.clock.wait(pause)
-				correctness = "WRONG"
-			if block == exp.blocks[0]:
-			    exp.data.add([block.name, trial.id, sex, age, press, rt, correctness])
+				exp.clock.wait(PAUSE)
+				right_or_wrong = "WRONG"
+			if block == exp.blocks[1]: #in block 2 we add data
+			    exp.data.add([trial.id+1, counter_stimuli+1, sex, age, pressed_key, rt, right_or_wrong, task_switch])
+			counter_stimuli += 1
 		counter_stimuli = 0
+		counter_trials += 1
 	counter_trials = 0
 
 
-expyriment.control.end(goodbye_text="Thank you for participating in our experiment.")
+expyriment.control.end(goodbye_text="This is the end of the experiment. Thank you for participating.")
